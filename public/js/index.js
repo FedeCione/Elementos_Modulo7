@@ -1,7 +1,7 @@
 let main = document.querySelector('main');
 let h2 = document.querySelector('h2');
 let a = document.querySelector('a');
-let p = document.querySelector('p');
+let p = document.querySelectorAll('p');
 let body = document.querySelector('body');
 
 let nombre = prompt('Ingrese su nombre');
@@ -21,10 +21,10 @@ if(background === true) {
 }
 
 for(i = 0; i < p.length; i++){
-    if(p[i]%2 === 0){
-        p[i].className = " destacadoPar";
+    if(i % 2 == 0){
+        p[i].className += " destacadoPar";
     } else {
-        p[i].className = " destacadoImpar";
+        p[i].className += " destacadoImpar";
     }
 }
 
